@@ -8,7 +8,7 @@ const val URL_SITE = "https://mybook.ru/author/duglas-adams/avtostopom-po-galakt
 
 fun main() {
     val doc: Document = Jsoup.connect(URL_SITE).get()
-    val quotes: Elements = doc.select("div.sc-2aegk7-2.bzpNIu")
+    val quotes: Elements = doc.select("article")
 
     quotes.forEach { println(it.text())}
 }
